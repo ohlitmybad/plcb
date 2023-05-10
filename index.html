@@ -1,0 +1,630 @@
+
+
+
+
+
+<html>
+<head>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="https://ohlitmybad.github.io/scatter/favicon.ico">
+	<title>Compare PL CBs</title>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+<style>
+circle {
+  cursor: pointer;
+}
+
+.button-1 {
+  align-items: center;
+  background-color: #F9F9F9;
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .1s,-webkit-box-shadow .1s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  position: absolute;
+  top: 70px;
+  left: 1150px;
+  width: 120px; 
+ 
+  touch-action: manipulation;
+}
+
+.button-1:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
+}
+
+
+.button-2 {
+  align-items: center;
+  background-color: #F9F9F9;
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .1s,-webkit-box-shadow .1s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  position: absolute;
+  top: 135px;
+  left: 1150px;
+width: 120px; 
+ 
+  touch-action: manipulation;
+}
+
+.button-2:hover {
+   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
+}
+
+.button-3 {
+  align-items: center;
+  background-color: #F9F9F9;
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .1s,-webkit-box-shadow .1s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  position: absolute;
+  top: 200px;
+  left: 1150px;
+width: 120px;
+ 
+  touch-action: manipulation;
+}
+
+.button-3:hover {
+   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
+}
+
+.button-4 {
+  align-items: center;
+  background-color: #F9F9F9;
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .1s,-webkit-box-shadow .1s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  position: absolute;
+  top: 265px;
+  left: 1150px;
+width: 120px;
+ 
+  touch-action: manipulation;
+}
+
+.button-4:hover {
+   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
+}
+
+.button-5 {
+  align-items: center;
+  background-color: #F9F9F9;
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .1s,-webkit-box-shadow .1s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  position: absolute;
+  top: 330px;
+  left: 1150px;
+width: 120px; 
+ 
+  touch-action: manipulation;
+}
+
+.button-5:hover {
+   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
+}
+
+
+.button-6 {
+  align-items: center;
+  background-color: #F9F9F9;
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .1s,-webkit-box-shadow .1s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  position: absolute;
+  top: 395px;
+  left: 1150px;
+width: 120px;
+ 
+  touch-action: manipulation;
+}
+
+.button-6:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
+}
+
+
+.button-7 {
+  align-items: center;
+  background-color: #F9F9F9;
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .1s,-webkit-box-shadow .1s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  position: absolute;
+  top: 460px;
+  left: 1150px;
+width: 120px;
+ 
+  touch-action: manipulation;
+}
+
+.button-7:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
+}
+
+
+
+.button-8 {
+  align-items: center;
+  background-color: #1DA1F2;
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .1s,-webkit-box-shadow .1s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  position: absolute;
+  top: 525px;
+  left: 1150px;
+ width: 120px; 
+  touch-action: manipulation;
+}
+
+.button-8:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
+}
+
+
+</style>
+	
+</head>
+<body>
+<svg id="scatter-plot"></svg>
+<script>
+  var csvData = `ID,Player,Minutes played,Duels per 90,Duels won %,Successful defensive actions per 90,Defensive duels per 90,Defensive duels won %,Aerial duels per 90,Aerial duels won %,PAdj Sliding tackles,Shots blocked per 90,PAdj Interceptions,Fouls per 90,Yellow cards per 90,Red cards per 90,Successful attacking actions per 90,Non-penalty goals per 90,xG per 90,Shots per 90,Assists per 90,Crosses per 90,Accurate crosses %,Dribbles per 90,Successful dribbles %,Offensive duels per 90,Offensive duels won %,Touches in box per 90,Progressive runs per 90,Accelerations per 90,Received passes per 90,Fouls suffered per 90,Passes per 90,Accurate passes %,Forward passes per 90,Accurate forward passes %,Short / medium passes per 90,Accurate short / medium passes %,Long passes per 90,Accurate long passes %,xA per 90,Shot assists per 90,Second assists per 90,Third assists per 90,Smart passes per 90,Accurate smart passes %,Key passes per 90,Passes to final third per 90,Accurate passes to final third %,Passes to penalty area per 90,Accurate passes to penalty area %,Through passes per 90,Accurate through passes %,Deep completions per 90,Deep completed crosses per 90,Progressive passes per 90,Accurate progressive passes %
+1,M. Keane,1022,16.91,62.5,9.51,5.2,59.32,8.81,70,0,0.53,7.53,0.62,0,0,0.7,0.09,0.13,1.14,0.09,0,0,0.53,66.67,0.97,72.73,1.5,0.44,0.09,15.59,0.26,30.73,81.09,17.08,74.23,24.22,85.45,6.52,64.86,0.02,0.18,0,0,0.09,0,0,5.37,72.13,0.44,20,0.18,0,0.26,0,8.37,70.53
+2,S. Cook,1034,10.36,67.23,8.09,3.66,71.43,4,65.22,0.59,0.78,5.63,0.44,0.35,0,0.26,0,0.02,0.17,0,0.09,100,0.35,50,0.52,33.33,0.26,0.44,0,23.07,0.17,36.3,86.09,13.58,69.23,30.2,93.08,6.01,50.72,0.02,0.09,0,0,0,0,0.09,4.35,62,0.17,100,0.09,0,0.17,0.09,6.53,65.33
+3,D. Ćaleta-Car,1052,10.87,64.57,10.69,5.39,71.43,3.59,59.52,0.65,0.94,7.99,0.77,0.17,0,0.26,0.09,0.06,0.43,0,0.09,100,0,0,0.26,0,0.68,0.09,0.09,28.83,0.09,44.49,86.73,17.2,75.62,38.41,91.98,5.99,52.86,0,0.09,0,0,0,0,0,4.79,62.5,0.6,28.57,0.86,40,0.26,0.09,7.96,60.22
+4,J. Matip,1093,16.55,64.18,10.7,7.49,74.73,3.79,60.87,0.25,0.16,7.59,0.66,0.25,0,0.74,0.08,0.08,0.33,0,0.25,66.67,0.91,45.45,2.39,44.83,0.91,3.62,0.82,45.62,0.41,63.16,88.27,21.66,76.05,57.89,90.9,5.02,59.02,0.04,0.25,0,0,0.16,0,0.08,6.75,71.95,1.07,30.77,0.49,33.33,0.49,0.16,9.14,70.27
+5,V. Lindelöf,1112,12.63,66.67,9.47,5.34,74.24,3.97,65.31,0.46,0.49,7.33,0.32,0.08,0,0.32,0,0.02,0.16,0,0,0,0.4,60,1.21,40,0.32,0.24,0,37.72,0.32,55.2,93.4,17.08,84.83,51.88,96.26,3.32,48.78,0,0,0,0,0.16,50,0,4.29,69.81,0.49,16.67,0.49,0,0,0,5.18,73.44
+6,M. Zanka Jørgensen,1121,10.04,56,8.19,4.9,59.02,3.05,47.37,0.28,0.64,5.82,0.56,0.08,0,0.08,0,0.06,0.24,0,0.24,0,0,0,0,0,0.56,0.16,0,21.2,0.24,31.95,81.91,14.45,75.56,28.18,87.46,3.53,43.18,0,0,0,0,0,0,0,4.5,67.86,0.56,14.29,0.08,0,0.24,0,5.46,55.88
+7,M. Wöber,1130,13.46,69.82,11.31,6.13,76.62,3.9,67.35,0.57,0.8,7.33,0.88,0.16,0,0.16,0,0.01,0.4,0,0.4,20,0.08,0,0.64,25,0.64,0.8,0.16,23.26,0.16,40.3,76.09,20.31,65.49,32.89,83.05,7.01,46.59,0.03,0.32,0,0,0.32,0,0.08,7.41,63.44,0.88,9.09,0.8,20,0.24,0.08,10.27,67.44
+8,A. Ogbonna,1160,10.24,53.03,7.45,3.72,62.5,4.5,53.45,0,0.39,5.18,0.16,0,0,0,0,0.01,0.23,0,0,0,0.08,0,0.62,50,0.47,0,0,15.59,0.23,24.91,85.36,9.08,68.38,20.87,89.59,4.03,63.46,0.01,0.08,0,0,0,0,0.08,2.25,62.07,0.16,50,0.31,50,0.08,0,3.65,57.45
+9,W. Fofana,1239,18.31,66.27,10.53,7.05,74.23,4.5,62.9,0.63,0.44,7.08,0.65,0.29,0,1.16,0.07,0.05,0.51,0,0.29,25,1.23,70.59,3.7,62.75,1.02,2.69,1.02,41.55,1.6,56.22,89.92,20.05,77.54,52.66,93.1,3.27,44.44,0,0.07,0.07,0,0.15,0,0.07,6.83,84.04,0.29,50,0.44,0,0.29,0.07,7.92,66.97
+10,J. Stephens,1349,9.94,57.72,8.81,3.4,74.51,2.94,45.45,0,1.13,6.83,0.6,0.2,0,0.2,0,0.02,0.07,0,0.13,100,0.13,0,0.73,45.45,0.53,0.87,0.2,22.75,0.13,35.96,85.9,13.88,73.56,30.89,91.14,4.94,52.7,0.02,0.27,0,0,0.07,100,0.07,4.47,74.63,0.33,80,0.33,0,0.13,0.13,7.01,64.76
+11,Felipe,1384,18.99,62.67,13.2,6.7,71.84,6.11,58.51,0.58,0.59,8.71,0.85,0.26,0,0.85,0,0.09,0.46,0.07,0.13,0,0.91,78.57,2.41,48.65,1.24,0.52,0.13,17.75,0.78,31.8,80.98,15.15,69.53,26.21,88.34,5.46,47.62,0,0.13,0,0,0.13,50,0,3.06,48.94,0.52,12.5,0.65,20,0.33,0,5.79,59.55
+12,T. Chalobah,1450,14.34,57.58,9.5,6.27,68.32,3.97,53.13,0.19,0.25,7.74,0.68,0.25,0,0.62,0,0.04,0.25,0,0.68,36.36,0.37,83.33,1.68,48.15,0.81,0.81,0.37,40.47,0.43,53.81,91.23,19.24,85.16,49.28,93.58,3.85,70.97,0.01,0.06,0.12,0,0.06,0,0.06,5.59,85.56,0.68,45.45,0.12,50,0.31,0.25,7.39,69.75
+13,L. Cooper,1479,17.16,61.7,9.61,6.09,70,6.15,57.43,0.85,0.55,6.63,0.73,0.24,0,0.37,0.06,0.08,0.55,0,0.06,100,0.3,40,0.91,53.33,0.67,0.12,0,22.03,0.49,38.95,84.84,17.28,73.59,34.32,90.43,4.56,42.67,0.01,0.06,0.12,0,0,0,0,4.81,60.76,0.12,100,0.12,50,0.12,0.06,6.88,62.83
+14,I. Konaté,1492,18.4,63.28,9.35,7.3,59.5,4.16,73.91,0.89,0.24,6.52,1.51,0.18,0,0.72,0,0.09,0.48,0,0,0,0.78,69.23,2.59,60.47,0.72,0.78,0.12,41.32,0.72,57.12,90.18,24.73,83.17,52.84,93.38,4.28,50.7,0,0.06,0,0,0.06,0,0.06,5.13,67.06,0.72,25,0.54,11.11,0.12,0,7.54,64
+15,J. Gomez,1526,17.04,57.79,9.55,5.84,61.62,4.95,54.76,0.45,0.65,8.73,0.77,0.18,0,0.59,0,0.01,0.24,0,0.41,28.57,0.29,100,2.06,31.43,0.12,1.06,0.18,50.19,0.24,68.94,89.65,23.94,78.33,62.1,93.83,6.43,53.21,0,0.06,0,0,0.18,66.67,0.06,10.44,75.71,1,58.82,0.88,53.33,0.53,0.12,10.56,74.86
+16,N. Aguerd,1538,11.76,55.22,9.19,4.27,67.12,4.33,51.35,0.31,0.99,6.29,0.47,0.23,0,0.35,0.12,0.1,0.47,0,0.06,0,0.29,80,1.64,39.29,0.99,0.29,0.12,22.76,0.41,34.35,82.62,15.68,70.15,26.8,91.7,7.49,50.78,0.02,0.23,0,0,0,0,0.06,4.04,55.07,0.41,28.57,0.47,25,0.29,0.06,6.5,68.47
+17,J. Bednarek,1647,12.08,60.63,11.75,5.41,67.68,3.39,56.45,0.73,1.15,10.02,0.71,0.22,0,0.05,0,0.04,0.38,0,0.05,0,0.05,100,0.66,50,0.55,0.66,0.22,25.52,0.38,41.69,87.81,16.28,77.52,37.05,91.89,4.59,55.95,0.01,0.11,0,0.05,0,0,0.05,3.77,59.42,0.16,33.33,0.11,0,0.16,0,6.99,64.84
+18,S. McKenna,1707,11.28,61.21,8.44,3.8,70.83,4.22,62.5,0.18,0.84,6.21,0.42,0.21,0,0.21,0,0.02,0.21,0,0.11,50,0.42,25,1.05,30,0.47,0.26,0.11,21.25,0.21,34.59,84.45,15.87,72.09,29.31,90.11,5.17,53.06,0.02,0.16,0,0,0.11,50,0.21,4.27,58.02,0.53,50,0.53,40,0.47,0.05,6.64,75.4
+19,D. Amartey,1761,10.63,54.33,7.05,3.53,57.97,3.58,50,0.06,0.92,6.22,0.36,0.05,0,0.31,0,0.02,0.2,0,0,0,0.31,66.67,1.43,39.29,0.36,1.02,0.15,39.71,0.15,53.46,93.59,20.8,89.19,50.95,95.79,2.5,48.98,0.01,0.15,0,0,0.05,100,0.1,4.7,81.52,0.1,50,0.05,100,0.15,0,5.78,76.11
+20,R. Varane,1772,10.06,59.6,7.36,3.86,59.21,3.3,63.08,0.07,0.81,6.6,0.46,0.05,0,0.3,0,0.08,0.3,0,0.05,0,0.41,37.5,0.86,41.18,0.66,0.76,0.25,31.08,0.1,45.66,89.54,16.71,77.2,41.39,93.5,4.22,51.81,0,0.05,0,0,0,0,0.05,5.69,74.11,0.36,57.14,0.36,42.86,0.25,0,6.35,69.6
+21,N. Collins,1808,13.49,54.98,8.61,5.28,63.21,3.53,54.93,0.39,0.85,6.58,0.9,0.1,0.05,0.25,0,0,0,0,0,0,0.6,41.67,2.09,45.24,0.15,0.5,0.2,33.25,0.35,48.68,92.33,17.97,83.1,44.15,94.59,4.53,70.33,0.01,0.15,0,0.05,0.15,0,0,4.98,79,0.25,40,0.45,11.11,0.1,0,6.67,73.88
+22,J. Stones,1882,9.85,58.74,6.12,3.97,65.06,2.92,75.41,0.61,0.33,5.79,0.53,0.1,0,0.48,0.1,0.05,0.43,0.1,0.53,9.09,0.48,50,1.91,32.5,0.91,1.48,0.33,53.89,0.38,65.13,94.2,17.45,88.77,61.55,96.35,3.11,64.62,0.03,0.24,0.1,0,0.19,25,0.24,7.17,88.67,0.77,25,0.24,40,0.14,0.1,6.31,78.79
+23,C. Lenglet,1905,14.27,59.93,8.5,6.52,70.29,3.12,53.03,0.25,0.33,5.01,0.9,0.19,0,0.66,0,0.03,0.43,0.09,0.66,42.86,0.52,45.45,1.94,48.78,0.57,1.23,0.52,40.44,0.66,54.38,88.62,19.37,77.8,47.76,93.67,6,52.76,0.02,0.19,0.09,0,0.28,16.67,0.09,5.86,67.74,0.94,45,0.85,16.67,0.14,0.28,7.98,63.31
+24,I. Diop,1918,10.23,62.39,9.2,4.74,70.3,2.44,55.77,0.44,0.52,7.36,0.8,0.09,0,0.38,0.05,0.02,0.14,0,0.05,100,0.52,45.45,1.08,43.48,0.38,1.27,0.14,38.62,0.28,53.92,89.03,20.65,77.05,47.72,93.41,6.15,54.96,0.02,0.05,0,0,0.05,0,0,5.87,65.6,0.66,42.86,0.52,18.18,0.19,0.05,8.45,71.11
+25,K. Koulibaly,1976,12.39,58.09,9.25,5.78,65.35,3.55,56.41,1.02,0.46,7.7,1,0.27,0.05,0.5,0.09,0.08,0.36,0.05,0.18,25,0.55,41.67,1.18,46.15,0.5,0.59,0.05,47.41,0.41,61.94,89.78,25.92,82.43,54.79,93.77,6.97,60.13,0.02,0.23,0.05,0.05,0.09,50,0.23,7.2,76.58,1,59.09,0.77,52.94,0.55,0.05,10.11,68.92
+26,T. Adarabioyo,2001,12.41,61.96,9.58,3.96,70.45,4,61.8,0.06,0.54,8.49,0.63,0.13,0,0.36,0.04,0.02,0.31,0,0.09,0,0.4,44.44,0.99,40.91,0.58,1.12,0.27,30.27,0.22,46.37,85.55,19.21,74,40.48,90,5.8,55.81,0.02,0.09,0,0.04,0.09,50,0,6.25,66.19,0.81,38.89,0.58,38.46,0.36,0,8.77,63.59
+27,A. Bella-Kotchap,2064,16.66,67.02,12.08,6.06,79.86,4.06,64.52,0.43,0.65,8.48,0.35,0.17,0,0.52,0,0.06,0.52,0.09,0.09,50,0.57,61.54,3.27,49.33,0.7,0.78,0.09,24.24,1.44,38.37,83.41,14.39,70,32.62,90.37,5.67,43.85,0.02,0.13,0,0,0.04,100,0.09,4.32,57.58,0.65,46.67,0.83,31.58,0.44,0.04,6.85,55.41
+28,Rúben Dias,2073,11.11,62.5,7.08,4.12,76.84,3.73,56.98,0.67,0.52,6.06,0.74,0.13,0,0.35,0,0.07,0.3,0,0.09,0,0.39,77.78,1,56.52,0.78,1.3,0.13,66.16,0.3,80.93,94.74,28.39,89.3,74.93,97.51,5.9,61.03,0,0.04,0,0,0,0,0,8.99,83.09,0.3,28.57,0.48,54.55,0.09,0,9.81,84.07
+29,K. Zouma,2104,9.37,62.56,7.27,3.04,66.2,3.68,63.95,0.13,0.56,5.31,0.51,0,0,0.43,0.09,0.1,0.6,0,0.04,100,0.13,100,0.77,55.56,0.77,0.3,0.09,20.58,0.21,32.12,87.62,12.19,74.04,28.06,92.38,4.02,54.26,0,0.04,0,0,0,0,0,2.35,47.27,0.3,42.86,0.3,28.57,0.13,0.04,3.89,52.75
+30,A. Webster,2106,10.47,63.67,7.99,3.33,65.38,3.76,71.59,0.63,0.73,8.82,0.34,0.09,0,0.38,0,0.06,0.56,0,0.09,50,0.38,55.56,1.15,48.15,0.81,1.2,0.17,49.83,0.3,65.6,90.36,27.05,82.46,60.9,92.98,4.62,56.48,0,0.04,0,0,0.09,50,0,7.52,74.43,0.43,70,0.51,50,0.3,0.04,10,72.65
+31,C. Dawson,2136,11.8,56.43,8.51,4.09,67.01,4.55,49.07,0.4,1.05,7.34,0.59,0.17,0,0.21,0.04,0.09,0.67,0,0.08,0,0.17,25,1.1,42.31,0.84,0.29,0,30.38,0.46,43.36,88.73,17.82,77.54,37.08,94.2,6.24,56.76,0,0.08,0,0,0.08,50,0.04,5.6,68.42,0.34,12.5,0.38,33.33,0.13,0,7.92,72.87
+32,C. Coady,2140,8.62,57.56,6.1,3.66,63.22,2.73,49.23,0.05,0.55,4.66,0.42,0.08,0,0.21,0.04,0.05,0.13,0.04,0.04,100,0.13,33.33,0.55,53.85,0.29,0.25,0.04,31.96,0.5,43.82,88.1,17.41,74.15,35.16,95.22,8.62,59.02,0.01,0.17,0,0,0,0,0.04,5.97,60.56,0.59,50,0.8,31.58,0.29,0.04,7.53,73.74
+33,M. Salisu,2156,16.7,60.5,12.27,7.22,69.36,5.26,60.32,0.2,0.83,8.67,1.09,0.21,0,0.75,0,0.08,0.63,0.04,0.58,57.14,0.25,50,1.42,35.29,0.88,0.25,0.04,26.22,0.13,43.08,83.14,21.37,75,34.9,89.71,7.6,54.95,0,0.08,0,0,0.13,66.67,0.04,6.39,64.05,1.29,35.48,0.58,35.71,0.21,0.33,9.94,70.59
+34,J. Worrall,2171,13.14,64.04,9.45,6.01,68.97,4.02,63.92,0.42,0.62,5.6,0.95,0.25,0,0.25,0.04,0.02,0.17,0,0.12,66.67,0.12,66.67,0.7,41.18,0.7,0.41,0.04,23.92,0.17,38.06,83.44,17.08,70.87,32.34,88.97,5.6,51.85,0.01,0.08,0,0,0.08,50,0.04,5.89,66.9,0.95,39.13,0.62,26.67,0.29,0.08,7.5,70.72
+35,B. Davies,2231,14.56,52.35,6.82,5.16,57.81,5.12,53.54,0.26,0.24,4.65,1.17,0.16,0,0.81,0.08,0.05,0.48,0.08,1.37,26.47,0.48,41.67,2.02,40,1.05,1.69,0.73,31.91,0.73,41.83,85.44,14.97,77.9,36.99,91.28,3.51,45.98,0.07,0.56,0.04,0.08,0.2,20,0.36,5,68.55,1.57,25.64,0.65,25,0.44,0.4,6.45,68.13
+36,L. Martínez,2276,15.74,60.8,12.46,7.75,68.88,2.69,47.06,0.59,1.03,9.12,0.87,0.24,0,0.79,0.04,0.02,0.32,0,0.08,50,0.79,90,2.37,50,0.43,0.47,0.04,38.32,0.4,55.2,88.18,21.2,75.56,48.88,93.28,6.25,48.73,0.01,0.2,0.04,0,0,0,0.08,7.2,63.74,0.75,26.32,1.34,20.59,0.16,0.04,7.2,68.13
+37,Thiago Silva,2286,10.51,64.42,9.92,4.37,66.67,3.54,67.78,1.07,0.67,10.1,0.28,0.04,0,0.2,0,0.07,0.43,0.08,0.12,33.33,0.12,100,0.79,55,0.59,0.35,0,49.41,0.47,66.69,92.86,23.98,85.71,59.76,95.72,6.81,68.79,0,0.08,0,0,0.04,0,0.04,6.65,75.15,1.02,61.54,0.91,43.48,0.71,0.04,8.66,78.18
+38,C. Mepham,2316,11.66,59,11.27,5.28,69.12,3.73,56.25,0.68,1.13,7.62,0.62,0.27,0,0.16,0,0.02,0.19,0,0.08,50,0.16,50,0.62,25,0.35,0.19,0.04,22.69,0.23,34.9,87.75,13.25,75.07,30.54,93.13,4.27,50,0.02,0.08,0,0,0,0,0.04,2.72,62.86,0.12,33.33,0.23,33.33,0.08,0.04,5.32,53.28
+39,M. Akanji,2333,12.61,54.13,6.6,5.59,62.07,2.58,43.28,0.39,0.27,4.84,0.89,0.08,0,0.39,0,0.07,0.54,0.04,0.39,20,0.46,41.67,1.97,37.25,1.08,1.85,0.35,54.93,0.42,69.98,94.43,23.26,89.55,65.89,96.84,3.7,59.38,0.02,0.15,0,0,0.04,0,0.04,7.95,87.38,0.62,25,0.42,18.18,0.19,0.08,6.98,80.11
+40,C. Romero,2494,17.21,59.54,11.19,7.87,68.81,3.86,57.94,0.99,0.69,6.23,1.44,0.32,0.04,0.54,0,0.05,0.36,0.04,0.04,0,0.65,66.67,2.38,39.39,0.43,1.05,0.18,33.99,0.4,50.95,89.87,19.2,81.02,46.41,92.46,4.51,64,0.02,0.22,0.04,0,0.11,66.67,0.11,5.12,78.87,0.51,57.14,0.47,61.54,0.32,0,8.19,64.32
+41,M. Senesi,2515,13.92,62.47,12.63,6.91,68.91,2.47,57.97,0.42,0.72,8.05,0.93,0.21,0,0.75,0.07,0.06,0.18,0,0.32,44.44,0.64,77.78,1.83,54.9,0.43,0.39,0.11,23.94,0.47,38.43,83.89,17.68,73.68,31.03,90.43,7.09,57.07,0.01,0.11,0,0,0.04,0,0.07,4.72,64.39,0.57,37.5,0.61,29.41,0.11,0.14,7.84,58.45
+42,W. Saliba,2647,12.21,59.05,7.34,4.62,69.85,3.6,52.83,0.34,0.37,6.52,0.65,0.14,0,0.58,0.07,0.03,0.17,0,0.07,100,0.54,81.25,1.94,47.37,0.41,0.61,0.03,43.52,0.41,60.08,93.66,22.34,87.82,57.33,95.2,2.69,60.76,0.01,0.1,0,0,0,0,0.03,5.07,85.23,0.17,60,0.2,50,0.1,0.03,6.87,71.29
+43,E. Pinnock,2692,13.14,66.16,10.06,4.41,73.48,5.75,69.77,0.29,0.77,8.2,0.2,0,0,0.53,0.07,0.09,0.3,0,0.3,33.33,0.27,100,1.04,38.71,0.84,0.07,0.03,17.38,0.27,29.62,84.76,11.87,70.7,26.01,89.2,3.31,54.55,0,0.03,0.07,0,0.1,0,0,2.61,55.13,0.5,33.33,0.2,0,0.13,0.13,4.21,59.52
+44,J. Andersen,2739,11.93,64.74,9.36,3.98,65.29,4.34,67.42,0.24,0.43,8.16,0.82,0.26,0,0.59,0.03,0.08,0.56,0,0.43,30.77,0.3,55.56,1.22,54.05,0.76,0.46,0.03,33.12,0.49,49.78,84.03,20.47,70.3,38.84,92.98,10.55,53.27,0.01,0.13,0,0,0.07,100,0.1,8.77,59.18,0.92,32.14,1.05,31.25,0.23,0.16,10.65,74.07
+45,W. Faes,2739,12.12,61.25,10.51,4.86,71.62,3.48,57.55,0.92,0.99,7.65,0.72,0.16,0.03,0.26,0,0.03,0.2,0.03,0,0,0.36,45.45,1.25,52.63,0.39,0.76,0.2,35.68,0.49,52.48,88.48,18.43,76.29,46.92,92.58,5.55,53.85,0,0.1,0,0,0.07,100,0,4.67,61.97,0.53,31.25,0.66,40,0.13,0,6.54,58.79
+46,V. van Dijk,2894,12.07,68.04,8.58,4.11,76.52,4.88,70.7,0.1,0.28,8.65,0.4,0.09,0,0.44,0.09,0.11,0.78,0.03,0.09,66.67,0.06,50,0.62,25,1.18,0.5,0.06,52.71,0.09,69.23,92.86,24.23,86.01,63.69,96,5.44,56.57,0.04,0.12,0.03,0.03,0.03,100,0.06,7.06,76.21,0.31,50,0.37,41.67,0.28,0.06,7.09,77.63
+47,S. Botman,3036,11.5,60.57,8.09,4.42,68.46,3.59,57.02,0.4,0.62,7.23,0.36,0.06,0,0.15,0,0.07,0.36,0,0,0,0.06,0,0.77,34.62,0.89,0.24,0.09,28.7,0.36,43.43,89.56,15.71,81.13,38.57,92.77,4.86,64.02,0.01,0.06,0,0,0,0,0.03,3.02,67.65,0.24,25,0.09,0,0.27,0,5.6,62.43
+48,E. Dier,3102,11.58,58.4,7.63,4.58,58.23,4.06,60,0.37,0.67,5.9,0.78,0.09,0,0.32,0.06,0.04,0.35,0.03,0.32,27.27,0.15,80,0.64,50,0.55,0.44,0.09,37.2,0.29,52.63,88.97,18.48,78.02,45.64,94.21,6.73,55.6,0.02,0.12,0,0.03,0.06,0,0.09,5.31,59.02,0.87,40,0.87,30,0.29,0.15,7.11,62.86
+49,F. Schär,3128,13.32,61.99,8.8,4.03,75,4.8,64.67,0.49,0.52,8.46,0.52,0.17,0,0.75,0.03,0.16,1.06,0.06,0.52,38.89,0.43,40,1.24,44.19,1.21,1.15,0.2,27.82,0.69,43.04,81.35,19.36,68.8,34.5,89.32,8.06,49.64,0.03,0.23,0,0.03,0.09,66.67,0.14,7.57,59.32,1.44,40,1.18,31.71,0.46,0.23,9.01,68.37
+50,T. Ream,3177,11.02,62.98,8.78,4.87,68.02,3.09,55.96,0.41,0.51,6.79,0.54,0.06,0,0.34,0.03,0.02,0.08,0,0.06,0,0.37,69.23,0.93,54.55,0.28,0.91,0.31,33.65,0.17,50.93,89.27,20.42,80.72,45.24,93.05,5.64,59.8,0,0,0,0,0.06,50,0,7,74.49,0.31,27.27,0.31,27.27,0.11,0,8.64,75.74
+51,R. Koch,3190,13.57,60.29,9.34,5.5,66.67,4.88,60.12,0.22,0.45,7.21,0.9,0.17,0,0.2,0,0.02,0.2,0,0.06,50,0.11,75,0.48,35.29,0.28,0.34,0.03,21.87,0.45,38.06,82.51,19.92,71.95,31.32,89.46,6.69,50.21,0,0,0,0,0,0,0,5.87,65.87,0.79,25,0.59,28.57,0.11,0.03,8.29,66.67
+52,T. Mings,3194,9.81,64.37,7.83,3.3,64.1,2.65,69.15,0.28,0.45,7.88,0.45,0.14,0,0.51,0.03,0.03,0.17,0.06,0.06,0,0.65,65.22,1.52,53.7,0.42,0.87,0.25,33.64,0.59,47.09,88.15,18.63,77.31,40.97,92.98,6.06,56.28,0.02,0.08,0.03,0,0.06,50,0.08,5.04,68.16,0.54,36.84,0.45,25,0.25,0,7.5,67.67
+53,L. Dunk,3263,11.12,59.31,6.95,3.31,60,4.08,56.08,0.75,0.55,7.65,0.47,0.11,0,0.33,0.03,0.06,0.44,0.03,0.06,50,0.22,62.5,0.88,50,0.47,0.69,0.06,55.41,0.77,72.93,92.44,24.33,83.22,67.08,95.72,5.79,54.76,0.02,0.08,0,0,0.22,37.5,0.11,7.75,71.89,0.8,44.83,1.32,31.25,0.33,0.03,8.55,78.39
+54,B. Mee,3313,14.37,55.39,8.12,3.21,68.64,7.04,50.19,0.71,0.9,6.66,0.3,0.05,0,0.52,0.08,0.07,0.46,0.03,0.27,40,0.35,69.23,1.28,46.81,0.9,0.46,0.03,23.93,0.35,37.52,82.26,14.89,67.88,30.97,88.42,6.33,54.08,0.01,0.05,0,0.03,0.08,66.67,0.05,5.03,56.22,0.62,30.43,0.46,23.53,0.16,0.08,6.95,63.67
+55,M. Guéhi,3341,13.2,63.67,9.62,5.15,69.11,3.18,58.47,0.43,0.46,6.99,0.57,0.22,0,0.65,0.03,0.05,0.27,0,0,0,0.59,77.27,2.05,61.84,0.59,0.46,0.11,31.17,1,48.33,88.85,19.83,79.08,41.3,94.39,7.03,56.32,0,0,0.03,0,0.08,66.67,0.03,5.33,67.68,0.27,30,0.54,50,0.11,0,8.78,70.86
+56,E. Konsa,3375,11.12,61.15,7.12,3.71,69.06,2.88,55.56,0.34,0.51,6.12,0.29,0.13,0,0.59,0,0.02,0.08,0,0.16,50,0.67,72,2.16,66.67,0.32,0.37,0.16,31.95,1.52,43.89,91.07,14.93,80.54,40.11,94.95,3.63,50,0.03,0.19,0,0.05,0.03,100,0.16,3.23,67.77,0.32,33.33,0.19,14.29,0.13,0.11,4.48,61.31
+57,Gabriel Magalhaes,3450,13.98,57.09,7.36,4.12,65.82,5.43,54.81,0.47,0.52,7.15,0.57,0.1,0,0.39,0.08,0.1,0.63,0,0.1,25,0.21,50,1.3,40,0.78,0.91,0.03,41.24,0.91,54.1,91.8,21.26,85.77,50.01,95.15,4.02,51.3,0,0.05,0.03,0,0.08,33.33,0,6.05,77.59,0.44,23.53,0.42,25,0.13,0.03,7.72,74.66
+58,M. Kilman,3457,12.7,58.81,9.4,4.56,68.57,4.06,56.41,0.32,1.09,8.18,0.47,0.08,0,0.47,0,0.04,0.29,0,0.1,50,0.78,43.33,1.93,35.14,0.39,0.78,0.36,34.94,0.31,49.05,86.68,19.5,73.97,41.5,93.73,7.47,47.74,0,0.05,0,0,0.13,60,0,5.83,66.96,0.42,50,0.57,31.82,0.13,0.05,8.96,62.79
+59,J. Tarkowski,3461,13.29,60.27,10.25,4.32,57.83,5.02,67.88,0.63,1.72,8.79,0.91,0.16,0,0.44,0.03,0.07,0.52,0.03,0,0,0.31,75,1.17,44.44,0.78,0.42,0.03,24.05,0.55,36.17,86.7,16.1,77.06,30.27,92.44,5.9,57.27,0.01,0.16,0.03,0.03,0.03,100,0.03,5.59,66.05,0.39,20,0.47,22.22,0.26,0,6.84,72.24`;
+
+  var rows = csvData.trim().split('\n');
+  var header = rows[0].split(',');
+  var data = rows.slice(1).map(function(row) {
+    return row.split(',').map(function(d) {
+      return parseFloat(d);
+    });
+  });
+
+  var margin = { top: 40, right: 80, bottom: 100, left: 100 };
+  var width = 1080 - margin.left - margin.right;
+  var height = 720 - margin.top - margin.bottom;
+
+// select the container element and set its position to relative
+var container = d3.select("body")
+  .append("div")
+  .style("position", "relative");
+
+// create the first select element and position it to the left of the container
+var selectX = container.append("select")
+  .attr("id", "select-x")
+  .on("change", updateChart)
+  .style("position", "absolute")
+  .style("left", "80px")
+  .style("top", "0px");
+
+// create the second select element and position it to the right of the container
+var selectY = container.append("select")
+  .attr("id", "select-y")
+  .on("change", updateChart)
+  .style("position", "absolute")
+  .style("left", "330px")
+  .style("top", "0px");
+
+
+  header.slice(2).forEach(function(metric) {
+    selectX.append("option")
+      .text(metric)
+      .attr("value", metric);
+    selectY.append("option")
+      .text(metric)
+      .attr("value", metric);
+  });
+
+  var svg = d3.select("#scatter-plot")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  var xMetric = header[2];
+  var yMetric = header[2];
+
+  var xScale = d3.scaleLinear()
+    .domain([0, d3.max(data, function(d) { return d[2]; })])
+    .range([0, width]);
+  var yScale = d3.scaleLinear()
+    .domain([0, d3.max(data, function(d) { return d[2]; })])
+    .range([height, 0]);
+
+var xAxis = d3.axisBottom(xScale)
+  .tickSize(0); 
+var yAxis = d3.axisLeft(yScale)
+  .tickSize(0); 
+
+var xExtent = d3.extent(data, function(d) { return d[header.indexOf(xMetric)]; });
+var yExtent = d3.extent(data, function(d) { return d[header.indexOf(yMetric)]; });
+
+svg.append("g")
+  .attr("transform", "translate(0," + height + ")")
+  .call(xAxis)
+  .selectAll("text")
+  .remove();
+
+svg.append("g")
+  .call(yAxis)
+  .selectAll("text")
+  .remove();
+
+svg.append("text")
+  .attr("class", "x-label")
+  .attr("text-anchor", "end")
+  .attr("x", width)
+  .attr("y", height + margin.top)
+  .text(header[2])
+  .style("font-family", "Arial")
+  .style("font-size", "12px");
+
+
+svg.append("text")
+  .attr("class", "y-label")
+  .attr("text-anchor", "end")
+  .attr("transform", "rotate(-90)")
+  .attr("y", -35)
+  .attr("x", 0)
+  .text(header[2])
+  .style("font-family", "Arial")
+  .style("font-size", "12px");
+
+
+svg.append("g")
+  .attr("class", "x-axis")
+  .attr("transform", "translate(0," + height + ")")
+  .call(d3.axisBottom(xScale).tickSize(0));
+
+svg.append("g")
+  .attr("class", "y-axis")
+  .call(d3.axisLeft(yScale).tickSize(0));
+
+
+var tooltip = d3.select("body")
+  .append("div")
+  .attr("class", "tooltip")
+  .style("opacity", 0);
+
+tooltip.style("position", "absolute")
+  .style("background-color", "#f9f9f9")
+  .style("border", "solid")
+  .style("border-width", "1px")
+  .style("border-radius", "5px")
+  .style("padding", "10px")
+  .style("font-size", "12px");
+
+var names = rows.slice(1).map(function(row) {
+  return row.split(',')[1];
+});
+
+
+
+var clickedCircles = []; // array to keep track of clicked circles
+
+var circles = svg.selectAll("circle")
+  .data(data)
+  .enter()
+  .append("circle")
+  .attr("cx", function(d) { return xScale(d[header.indexOf(xMetric)]); })
+  .attr("cy", function(d) { return yScale(d[header.indexOf(yMetric)]); })
+  .attr("r", 8)
+  .style("fill", "steelblue")
+  .on("mouseover", function(d, i) {
+    d3.select(this)
+      .classed("hovered", true)
+      .style("fill", "red");
+      
+    tooltip.transition()
+      .duration(200)
+      .style("opacity", .9);
+    tooltip.html(names[i] + "<br/>" + xMetric + ": " + d[header.indexOf(xMetric)] + "<br/>" + yMetric + ": " + d[header.indexOf(yMetric)])
+      .style("left", (d3.event.pageX + 10) + "px")
+      .style("top", (d3.event.pageY - 28) + "px");
+  })
+  .on("mouseout", function(d) {
+    if (!d3.select(this).classed("clicked")) {
+      d3.select(this)
+        .classed("hovered", false)
+        .style("fill", "steelblue");
+    }
+    
+    tooltip.transition()
+      .duration(500)
+      .style("opacity", 0);
+  })
+  .on("click", function(d, i) {
+    var clickedIndex = clickedCircles.indexOf(i);
+    if (clickedIndex === -1) {
+      // circle is not already clicked
+      clickedCircles.push(i); // add to clickedCircles array
+      d3.select(this)
+        .classed("clicked", true) // apply the "clicked" class
+        .classed("hovered", false)
+        .style("fill", "red");
+svg.append("text")
+   .attr("x", xScale(d[header.indexOf(xMetric)]) - 20)
+   .attr("y", yScale(d[header.indexOf(yMetric)]) + 20)
+   .text(names[i])
+   .classed("player-name", true)
+   .style("font-family", "Arial")
+   .style("font-size", "12px");
+
+    } else {
+      // circle is already clicked
+      clickedCircles.splice(clickedIndex, 1); // remove from clickedCircles array
+      d3.select(this)
+        .classed("clicked", false) // remove the "clicked" class
+        .classed("hovered", false)
+        .style("fill", "steelblue");
+      d3.selectAll(".player-name")
+        .filter(function() {
+          return d3.select(this).text() === names[i];
+        })
+        .remove();
+    }
+  });
+
+
+
+
+
+function updateChart() {
+  svg.selectAll("text.player-name").remove();
+  xMetric = selectX.property("value");
+  yMetric = selectY.property("value");
+
+
+xScale.domain(d3.extent(data, function(d) { return d[header.indexOf(xMetric)]; })).nice();
+yScale.domain(d3.extent(data, function(d) { return d[header.indexOf(yMetric)]; })).nice();
+
+
+  svg.select(".x-label")
+    .text(xMetric);
+
+  svg.select(".y-label")
+    .text(yMetric);
+
+  circles.transition()
+    .duration(1000)
+    .attr("cx", function(d) { return xScale(d[header.indexOf(xMetric)]); })
+    .attr("cy", function(d) { return yScale(d[header.indexOf(yMetric)]); });
+
+  svg.select(".x-axis")
+    .transition()
+    .duration(1000)
+    .call(d3.axisBottom(xScale).tickSize(0));
+
+  svg.select(".y-axis")
+    .transition()
+    .duration(1000)
+    .call(d3.axisLeft(yScale).tickSize(0));
+}
+
+
+
+
+</script>
+
+<a href="https://ohlitmybad.github.io/radars/" target="_blank" rel="noopener noreferrer">
+  <button class="button-1" role="button">Home</button>
+<a href="https://ohlitmybad.github.io/gkpl/" target="_blank" rel="noopener noreferrer">
+  <button class="button-2" role="button">Goalkeepers</button>
+<a href="https://ohlitmybad.github.io/plcb/" target="_blank" rel="noopener noreferrer">
+  <button class="button-3" role="button">Centrebacks</button>
+<a href="https://ohlitmybad.github.io/plfb/" target="_blank" rel="noopener noreferrer">
+  <button class="button-4" role="button">Fullbacks</button>
+<a href="https://ohlitmybad.github.io/plcm/" target="_blank" rel="noopener noreferrer">
+  <button class="button-5" role="button">Midfielders</button>
+<a href="https://ohlitmybad.github.io/plfw/" target="_blank" rel="noopener noreferrer">
+  <button class="button-6" role="button">Wingers</button>
+<a href="https://ohlitmybad.github.io/plst/" target="_blank" rel="noopener noreferrer">
+  <button class="button-7" role="button">Strikers</button>
+<a href="https://twitter.com/ohlitmybad" target="_blank" rel="noopener noreferrer">
+  <button class="button-8" role="button">@ohlitmybad</button>
+</a>
+
+</body>
+</html>
